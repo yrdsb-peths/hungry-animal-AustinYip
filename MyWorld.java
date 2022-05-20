@@ -5,11 +5,16 @@ public class MyWorld extends World
     public MyWorld()
     {    
         super(600, 400, 1); 
-        bee b1 = new bee();
+        Bee b1 = new Bee();
         addObject(b1,300,350);
-        
-        fries food1 = new fries();
-        addObject(food1, 300, 0);
-        
+        createApple();
+    }
+    
+    public void createApple()
+    {
+        fries food2 = new fries();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(food2, x, y);
     }
 }
