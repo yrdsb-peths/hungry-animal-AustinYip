@@ -1,5 +1,6 @@
 #Greenfoot project file
 class.Bee.image=bee.png
+class.MyWorld.image=structure-of-beehive.jpg
 class.fries.image=chips-1.png
 dependency1.from=MyWorld
 dependency1.to=Label

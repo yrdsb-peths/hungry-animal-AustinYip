@@ -1,13 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class fries here.
+ * Fries object
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Austin Yip
+ * @version May 2022
  */
 public class fries extends Actor
 {
+    static int speed = 1;
     /**
      * Act - do whatever the fries wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,7 +16,7 @@ public class fries extends Actor
     public void act() 
     {
         int x = getX();
-        int y = getY();
+        int y = getY() + speed;
         setLocation(x,y+2);
         
         MyWorld world = (MyWorld) getWorld();
@@ -25,4 +26,9 @@ public class fries extends Actor
             world.removeObject(this);
         }
     }    
+    
+    public static void setSpeed(int spd)
+    {
+        speed = spd;
+    }
 }
